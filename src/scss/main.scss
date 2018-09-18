@@ -1,0 +1,52 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-saba img{
+    width: 125px;
+    height: auto;
+}
+.list-social{
+    padding: 0px;
+    margin: 0px;
+    li{
+        margin-right: 0px !important;
+        border: none !important; 
+        a{
+            display: flex;
+            width: 27px;
+            height: 27px;
+            background-color: #5D5D5D;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        a i{
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+header{
+    .navbar-collapse{
+        li{
+            padding: 0px 5px;
+            border-left: 1px solid #000;
+        }
+
+        li:first-child{
+            border: none;
+        }
+    }
+    
+    .nav-item a{
+        line-height: normal;
+        padding-top: 0px;
+        padding-bottom: 0px; 
+    }
+
+    .list-social{
+        margin-left: 15px;
+    }
+    
+}
