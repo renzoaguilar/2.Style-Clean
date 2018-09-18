@@ -27,18 +27,7 @@ body{
         }
     }
 }
-header{
-    .navbar-collapse{
-        li{
-            padding: 0px 5px;
-            border-left: 1px solid #000;
-        }
-
-        li:first-child{
-            border: none;
-        }
-    }
-    
+header{  
     .nav-item a{
         line-height: normal;
         padding-top: 0px;
