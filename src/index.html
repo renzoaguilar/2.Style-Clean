@@ -14,7 +14,6 @@
 </head>
 <body>
     <header>
-        
         <nav class="navbar navbar-expand-lg sub-nav">
             <div class="container">
                 <div class="collapse navbar-collapse">
@@ -63,6 +62,12 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div class="owl-carousel owl-theme">
+            <div class="item slider1"></div>
+            <div class="item slider2" style="background:red"></div>
+        </div>
+    </main>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -70,7 +75,16 @@
     <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel();
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:0,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    }
+                }
+            })
         });
     </script>
 </body>

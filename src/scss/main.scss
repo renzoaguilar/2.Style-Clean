@@ -95,3 +95,59 @@ header{
         }
     }
 }
+
+
+.owl-theme{
+    position: relative;
+    .owl-nav{
+        button{
+            opacity: 0.5;
+        }
+        button:hover{
+            background: none !important;
+            opacity: 0.9;
+        }
+        button span{
+            color: #fff;
+            font-size: 45px;
+            line-height: normal;
+        }
+    }
+    .item{
+        height: 640px;
+        background-color: #000;
+    }
+
+    .owl-prev, .owl-next{
+        position: absolute;
+        height: 640px;
+        top: 0px;
+    }
+
+    .owl-prev{
+        left: 30px;
+    }
+
+    .owl-next{
+        right: 30px;
+    }
+
+    .owl-dots{
+        width: 100%;
+        position:absolute;
+        bottom: 15px;
+        .owl-dot{
+            margin: 0 2px;
+        }
+        .owl-dot.active{
+            border: 1px solid #fff; 
+            border-radius: 50%; 
+            
+        }
+        .owl-dot span{
+            color: #fff;
+            background-color: #fff !important;
+            margin: 3px 3px;
+        }
+    }
+}
