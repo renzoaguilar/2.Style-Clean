@@ -131,6 +131,71 @@ header{
         }
     }
 
+    .slider2{
+        .promocion{
+            text-align: center;
+            padding-left: 0px;
+            li{
+                list-style: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            li:first-child{
+                img{
+                    padding-right: 22px;
+                    border-right: 2px solid #fff;
+                    width: 143px;
+                } 
+            }
+
+            li:last-child{
+                text-align: left;
+                color: #fff;
+                font-size: 29px;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-left: 22px;
+                width: 480px;
+                display: inline-flex;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+        }
+
+        .terminos{
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: normal;
+            letter-spacing: 0.5px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .slider3{
+        h2{
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 34px;
+            letter-spacing: 2px;
+            margin-bottom: 0px;
+
+            b{
+                font-weight: bold;
+            }
+        }
+
+        .slider-logo{
+            width: 180px;
+            position: absolute;
+            right: 45px;
+            bottom: 45px; 
+        }
+    }
+
+    
+
     .owl-nav{
         margin-top: 0px;
         button{
