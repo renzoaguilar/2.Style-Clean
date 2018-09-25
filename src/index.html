@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="inico">
     <header>
         <nav class="navbar navbar-expand-lg sub-nav">
             <div class="container">
@@ -45,17 +45,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio</a>
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#inico">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Nosotros</a>
+                            <a data-scroll class="nav-link" href="#servicios">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contáctenos</a>
+                            <a data-scroll class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#contactenos">Contáctenos</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
                         <h2><b>Calidad</b> que sobrepasa el <b>lavado</b></h2>
                     </div>
             </div>
-            <div class="item slider2" style="background:red">
+            <div class="item slider2" style="background-image: url('images/fondo2.jpg')">
                 <div class="text-center">
                     <ul class="promocion">
                         <li><img src="images/50dc.svg" alt="50% de descuento"></li>
@@ -80,15 +80,22 @@
                 </div>
             </div>
 
-            <div class="item slider3" style="background:rgb(0, 0, 0)">
+            <div class="item slider3" style="background-image: url('images/fondo3.jpg')">
                 <div class="text-center">
                    <h2>Cuidamos al máximo <br><b>tus prendas y tu estilo</b></h2> 
                 </div>
 
                 <img class="slider-logo" src="images/logo_simple.svg" alt="">
             </div>
+
+            <div class="item slider4" style="background-image: url('images/fondo4.jpg')">
+                <div class="text-center">
+                    <img src="images/puntana.svg" alt="">
+                    <h2>Arreglos y alta costura</h2>
+                </div>
+            </div>
         </div>
-        <section class="servicios">
+        <section id="servicios" class="servicios">
             <div class="container2">
                 <h2 class="title">Servicios</h2>
                 <div style="background:#000; height: 300px;" class="video">
@@ -147,7 +154,7 @@
             </div>
         </section>
 
-        <section class="cajero-automatico">
+        <section id="nosotros" class="cajero-automatico">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-xs-12 box-cajero">
@@ -218,7 +225,7 @@
         </div>
         </section>
 
-        <section class="contactenos">
+        <section id="contactenos" class="contactenos">
             <div class="container">
                 <h2 class="title">Contáctenos</h2>
                 <div class="row">
@@ -250,7 +257,6 @@
                             </div>
                             <button type="submit" class="enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
                             
-
                         </form>
                     </div>
                     <div class="col-md-6 col-xs-12 contacto-box">
@@ -358,6 +364,58 @@
                     }
                 }
             })
+        });
+    </script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+        $(".nav-link").on("click", function(e){
+        $("a.nav-link").removeClass("active");
+        $(this).addClass("active");
+        });
+
+        
+     $(document).on('click', '.nav-link', function (event) {
+    event.preventDefault();
+
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 75
+    }, 1000);
+    });
+
+    
+    
+
+     $(document).ready(function () {
+  
+  'use strict';
+  
+        var c, currentScrollTop = 0, currentScrollTop2 = 200,
+            navbar = $('.sub-nav');
+            var logo = $('.logo');
+            var nav = $('.principal-nav');
+
+            
+
+        $(window).scroll(function () {
+            var a = $(window).scrollTop();
+            var b = navbar.height();
+            
+            currentScrollTop = a;
+            
+            if (c < currentScrollTop && a > b + b) {
+                navbar.addClass("scrollUp");
+                logo.addClass("logo2");
+                nav.addClass("principal-nav2");
+
+            } else if (c > currentScrollTop && !(a <= b)) {
+                navbar.removeClass("scrollUp");
+                logo.removeClass("logo2");
+                nav.removeClass("principal-nav2");
+            }
+            c = currentScrollTop2;
+        });
+        
         });
     </script>
 </body>

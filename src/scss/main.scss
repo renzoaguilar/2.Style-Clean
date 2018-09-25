@@ -13,6 +13,18 @@ body{
     width: 125px;
     height: auto;
 }
+
+.sub-nav.scrollUp {
+    margin-top: -42px !important;
+}
+
+.principal-nav2 {
+    background-color: #000 !important;
+}
+
+.logo2{
+    top: -30px !important;
+}
 .list-social{
     padding: 0px;
     margin: 0px;
@@ -36,7 +48,7 @@ body{
     }
 }
 header{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     width: 100%;
 
@@ -45,6 +57,7 @@ header{
         padding: 15px 30px;
         position: absolute;
         top: -71px;
+        transition: all 0.3s;
         img{
             width: 155px
         }
@@ -60,8 +73,9 @@ header{
     }
 
     .sub-nav{
-        background-color: rgba(170, 169, 169, 0.15);
+        background-color: rgba(35, 34, 34, 0.7);
         border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s;
         .navbar-nav{
             li{
                 margin-left: 15px;
@@ -191,6 +205,25 @@ header{
             position: absolute;
             right: 45px;
             bottom: 45px; 
+        }
+    }
+
+    .slider4{
+        div{
+            img{
+                width: 200px;
+                margin-bottom: 20px;
+                display: inline;
+            }
+
+            h2{
+                color: #9CE4D0;
+                font-size: 18px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 0px;
+
+            }
         }
     }
 
@@ -751,5 +784,23 @@ footer{
         margin-bottom: 0px;
         font-size: 14px;
     }
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+    color: #9CE4D0 !important;
+}
+
+.list-social li a:hover{
+    background-color:  #9CE4D0;
+    text-decoration: none; 
+}
+
+.redessociales li a:hover{
+    background-color:  #9CE4D0 !important;
+    text-decoration: none !important;
+}
+
+.redessociales li a:hover i{
+    color: #000 !important;
 }
 
