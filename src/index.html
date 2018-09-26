@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Saba</title>
+    <title>Style & Clean | Lavanderías Inteligentes </title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -41,7 +42,7 @@
                     <img src="images/logo_style_clean.svg" alt="Logo Style & Clean">
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
@@ -98,8 +99,8 @@
         <section id="servicios" class="servicios">
             <div class="container2">
                 <h2 class="title">Servicios</h2>
-                <div style="background:#000; height: 300px;" class="video">
-                </div>
+                <iframe class="video" src="https://www.youtube.com/embed/vr2-yaUxXpI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
                 <div class="row">
                     <article class="col-md-6 mt-30">
                         <div class="item-servicio">
@@ -166,7 +167,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12">
-                        <div class="video"></div>
+                        <iframe class="video" src="https://www.youtube.com/embed/WJgKN06oLzE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -176,7 +177,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
-                        <div class="video"></div>
+                            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/LfR9C5fy4hY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                     <div class="col-md-6 col-xs-12 box-cajero">
                         <div class="text-left">
@@ -371,6 +372,10 @@
         $(".nav-link").on("click", function(e){
         $("a.nav-link").removeClass("active");
         $(this).addClass("active");
+        });
+
+        $(".nav-link").on("click", function(e){
+            $("#navbarSupportedContent").removeClass("show");
         });
 
         
