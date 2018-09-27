@@ -232,32 +232,44 @@
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
                         <p style="color: rgba(0,0,0,0.6); font-size:14px;">No dude en consultarnos, ingrese su consulta y lo atenderemos a la brevedad.</p>
-                        <form action="">
+                        <form action="enviar.php" method="post" class="formulario-contacto"> 
                             <div class="row-input">
-                                <input type="text" nome="nombre" id="nombre" placeholder="Nombre" required>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <p>*</p>
                             </div>
                             <div class="row-input row-input2">
-                                <input type="email" nome="correo" id="correo" placeholder="Correo Electrónico" required>
+                                <label for="correo">Correo</label>
+                                <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" required>
                                 <i style="font-size: 15px;" class="fa fa-envelope" aria-hidden="true"></i>
                                 <p>*</p>
                             </div>
                             <div class="row-input row-input2">
-                                <input type="text" nome="telefono" id="telefono" placeholder="Telefono">
+                                <label for="telefono">Telefono</label>
+                                <input type="text" name="telefono" id="telefono" placeholder="Telefono">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                             </div>
                             <div class="row-input clear">
-                                <input type="text" nome="asunto" id="asunto" placeholder="Asunto"  required>
+                                <label for="asunto">Asunto</label>
+                                <input type="text" name="asunto" id="asunto" placeholder="Asunto"  required>
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                                 <p>*</p>
                             </div>
                             <div class="row-input">
+                                <label for="mensaje">Mensaje</label>
                                 <textarea name="mensaje" id="mensaje" cols="30" rows="7" placeholder="Mensaje" required></textarea>
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </div>
                             <button type="submit" class="enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
                             
+                            <div style="margin-top: 10px;" id="alerta" class="alert hide">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                        &times;
+                                    </button>
+            
+                                    <strong class="respuesta"></strong>  <span class="mensaje_alerta"></span>
+                             </div>
                         </form>
                     </div>
                     <div class="col-md-6 col-xs-12 contacto-box">
@@ -367,6 +379,7 @@
             })
         });
     </script>
+    <script src="js/code.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script>
         $(".nav-link").on("click", function(e){
@@ -392,15 +405,12 @@
     
 
      $(document).ready(function () {
-  
   'use strict';
   
         var c, currentScrollTop = 0, currentScrollTop2 = 200,
             navbar = $('.sub-nav');
             var logo = $('.logo');
             var nav = $('.principal-nav');
-
-            
 
         $(window).scroll(function () {
             var a = $(window).scrollTop();

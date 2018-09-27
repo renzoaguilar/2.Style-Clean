@@ -22,6 +22,14 @@ body{
     background-color: #000 !important;
 }
 
+label{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
 .logo2{
     top: -30px !important;
 }
@@ -613,6 +621,10 @@ header{
             margin-bottom: 20px;
             position: relative;
 
+            label{
+                display: none;
+            }
+
             input{
                 width: 100%;
                 font-size: 14px;
@@ -848,7 +860,6 @@ footer{
     }
   }
 
-
   @media (max-width: 980px) {
     header .principal-nav {
         padding: 11px 0px;
@@ -869,7 +880,7 @@ footer{
 
     .principal-nav .navbar-nav{
         text-align: center;
-        margin-top: 30px;
+        margin-top: 42px;
         li{
             margin:0px !important;
             padding: 13px 0px 10px 0px;
@@ -984,8 +995,6 @@ footer{
     }
 
   }
-
-
   
   @media (max-width: 500px) {
 
@@ -1066,6 +1075,76 @@ footer{
 
     .promociones article {
         height: 265px;
+    }
+
+    .contactenos form .row-input2 {
+        width: 100%;
+    }
+    .contactenos form > div:nth-child(3) {
+        padding-left: 0px;
+    }
+    .contactenos form > div:nth-child(2) {
+        padding-right: 0px;
+    }
+    
+    .contactenos form > div:nth-child(3) i {
+        left: 16px;
+    }
+
+  }
+
+  @media (max-width: 390px) {
+
+    .kit_limpieza .video {
+        height: 200px;
+    }
+
+    .cajero-automatico .video {
+        height: 200px;
+    }
+    .kit_limpieza .promocion-baner {
+        max-width: 300px;
+        height: 54px;
+    }
+    .kit_limpieza .promocion-baner .monto::after {
+        width: 39px;
+        height: 38px;
+        top: 8px;
+        right: -20px;
+    }
+
+    .kit_limpieza .promocion-baner .descripcion {
+        width: 81%;
+        padding: 9px 0px 0px 40px;
+    }
+
+    .title::before, .title::after {
+        width: 50px;
+    }
+
+    .servicios .item-servicio .item-footer {
+        padding: 53px 10px 0px 10px;
+        height: 165px;
+    }
+
+    .servicios .item-servicio .icono {
+        bottom: 125px;
+    }
+
+    .promociones article .promocion li:first-child img {
+        padding-right: 10px;
+        width: 87px;
+        margin-bottom: 10px;
+        border: none;
+    }
+
+    .promociones article .promocion li:last-child {
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .promociones article {
+        height: 290px;
     }
 
   }
